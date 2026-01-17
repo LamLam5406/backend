@@ -17,7 +17,7 @@ async function startServer() {
     // 2. Đồng bộ Models với Database
     // force: false => Không xóa bảng cũ nếu đã tồn tại (An toàn)
     // alter: true  => Tự động sửa bảng nếu bạn thay đổi code model (Thêm cột, đổi kiểu...)
-    await sequelize.sync({ alter: true }); 
+    await sequelize.sync(); 
     console.log('✅ All models were synchronized successfully.');
 
     // 3. Khởi chạy Server
